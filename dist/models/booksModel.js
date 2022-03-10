@@ -1,4 +1,3 @@
-"use strict";
 const Mongoose = require('mongoose');
 const bookSchema = new Mongoose.Schema({
     title: { type: String, required: true },
