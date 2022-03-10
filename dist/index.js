@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const port = 5000;
 const bodyParser = require('body-parser');
+const MongoDBbooks = require('../config/db.ts');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.get('/', (req, res) => {
@@ -10,4 +11,5 @@ app.get('/', (req, res) => {
 });
 app.listen(port, () => {
     console.log(`Application exemple à l'écoute sur le port ${port}!`);
+    MongoDBbooks.initialize();
 });

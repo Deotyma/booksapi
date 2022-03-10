@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const port:Number = 5000;
 const bodyParser = require('body-parser');
+const MongoDBbooks = require('../config/db.ts');
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -15,4 +16,5 @@ app.get('/', (req: Request, res: Response)=> {
 
 app.listen(port, ()=>{
     console.log(`Application exemple à l'écoute sur le port ${port}!`)
+    MongoDBbooks.initialize();
 })
