@@ -56,5 +56,4 @@ module.exports = (app: Express) =>{
 
         res.json({status: 200, result: deletedBook})
     })
-
 }
