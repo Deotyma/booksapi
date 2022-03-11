@@ -6,6 +6,7 @@ const MongoDBbooks = require('../config/db.ts');
 const booksRoutes = require('./routes/booksRoutes');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static('build'));
 app.get('/', (req, res) => {
     res.json();
 });
