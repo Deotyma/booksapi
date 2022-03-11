@@ -13,7 +13,7 @@ app.use(express.static('build'));
 
 
 app.get('/', (req: Request, res: Response)=> {
-    res.json()
+    res.json({status: 200, msg:"It works"})
 })
 
 booksRoutes(app)
