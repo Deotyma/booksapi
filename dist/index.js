@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 require('dotenv').config();
-const port = process.env.POST || 5000;
+const port = parseInt(process.env.PORT, 10) || 5000;
 const bodyParser = require('body-parser');
 const MongoDBbooks = require('../config/db.ts');
 const booksRoutes = require('./routes/booksRoutes');

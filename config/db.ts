@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
-const DB = "books";
-const URI =`mongodb+srv://Deotyma:Mam2koty@cluster0.uncn9.mongodb.net/${DB}?retryWrites=true&w=majority`;
-
+require('dotenv').config();
+const db = process.env.DB;
+const passwordDb=process.env.PASSWORDDB
+const URI =`mongodb+srv://Deotyma:${passwordDb}@cluster0.uncn9.mongodb.net/${db}?retryWrites=true&w=majority`;
 
 const MongoDBbooks = {
     initialize: () => {
@@ -12,7 +13,7 @@ const MongoDBbooks = {
                     useUnifiedTopology: true
                 })
 
-            client.then(() => {return console.log(`successfully connected to DB: ${DB}`)})
+            client.then(() => {return console.log(`successfully connected to DB: ${db}`)})
             .catch((err)=> {console.log(err)})
         } catch(err) {
              throw Error(err)
