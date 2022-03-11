@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && nodemon dist/index.js",
-    "dev": "concurrently -k -n \"Typescript,Node\" -p \"[{name}]\" -c \"blue,green\" \"tsc --watch\" \"nodemon dist/index.js\"",
+    "start": "ntsc && nodemon dist/index.js",
+    "dev": "concurrently -k -n \"Typescript,Node\" -p \"[{name}]\" -c \"blue,green\" \"ntsc --watch\" \"nodemon dist/index.js\"",
     "deploy": "git add . && git commit -m Heroku && git push heroku main"
   },
   "author": "",
@@ -24,7 +24,7 @@
     "debug": "^4.3.3",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "tsc": "^2.0.4"
+    "ntypescript": "^1.201706190042.1"
   },
   "engines": {
     "node": "16.x"
